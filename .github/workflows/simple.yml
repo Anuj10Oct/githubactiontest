@@ -8,8 +8,13 @@ jobs:
     environment: dev
     steps:
       - name: echo a string
-        run: eccho "First Github Action"
+        run: echo "First Github Action"
       - name: multiline script
         run: |
           node -v
           npm -v
+      - name: python Command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
