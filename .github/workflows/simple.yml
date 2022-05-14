@@ -5,6 +5,7 @@ on: [push]
 jobs:
   run-shell-commands:
     runs-on: ubuntu-latest
+    environment: dev
     steps:
       - name: echo a string
         run: eccho "First Github Action"
